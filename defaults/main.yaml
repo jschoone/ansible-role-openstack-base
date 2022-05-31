@@ -1,0 +1,18 @@
+openstack_version: victoria
+
+management_interface: "{{ ansible_default_ipv4['alias'] }}"
+
+base_packages: "{{ _base_packages[ansible_os_family] }}"
+_base_packages:
+  RedHat:
+  - network-scripts
+  - vim
+  - unzip
+  Debian:
+  - vim
+  - unzip
+
+chrony:
+  conf_destination:
+    Debian: /etc/chrony/chrony.conf
+    RedHat: /etc/chrony.conf
