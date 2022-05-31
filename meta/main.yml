@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: openstack-base
+  role_name: openstack_base
   author: jschoone
   description: Prepare OpenStack nodes
   license: license (BSD)
